@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Markdown from 'react-markdown'
-import './index.css'
 
 export default () => (
   <Markdown>
