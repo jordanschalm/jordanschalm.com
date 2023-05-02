@@ -1,5 +1,7 @@
 .Project {
   margin-bottom: 1.75rem;
+  text-align: justify;
+  text-justify: newspaper;
 }
 
 .Project__header {
@@ -18,6 +20,11 @@
 
 .Project__dot {
   font-size: 0.75rem;
+  padding: 0 .25rem 0 .25rem;
+}
+
+.Project__date-container {
+  color: rgb(79, 79, 79)
 }
 
 .Project__subheader {
@@ -27,4 +34,12 @@
 
 .Project__description {
   margin-bottom: 0.5rem;
+}
+
+.Project p {
+  margin-bottom: 0.15rem;
+}
+
+.Project ul {
+  margin-bottom: 0.25rem;
 }

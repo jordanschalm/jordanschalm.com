@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './index.css'
 
-// Typestroke speeds
+// Typestroke speeds (ms)
 const QUICK = 200
 const SLOW = 500
 
@@ -9,46 +9,49 @@ class Terminal extends Component {
   constructor(props) {
     super(props)
 
-    this._animateText = this._animateText.bind(this)
+    this._typeName = this._typeName.bind(this)
     this.state = {
       visibleText: '',
-      animating: true,
+      blinking: true,
       timer: null,
     }
   }
 
   componentDidMount() {
-    this._animateText(this.props.text)
+    setTimeout(() => this._typeName(this.props.text), 3000)
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.text !== this.props.text) {
       // Reset any animation timers we have and restart cursor animation
       clearTimeout(this.state.timer)
-      this._animateText(nextProps.text)
+      this._typeName(nextProps.text)
     }
   }
 
   render() {
-    const { animating, visibleText } = this.state
+    const { blinking, visibleText } = this.state
     return (
       <div className="Terminal">
         <div className="Terminal__container">
           <h1 className="Terminal__text">{visibleText}</h1>
-          <div className={`Terminal__cursor ${animating ? 'animating' : ''}`} />
+          <div className={`Terminal__cursor ${blinking ? 'blinking' : ''}`} />
         </div>
       </div>
     )
   }
 
-  // Handles animating the text inside the terminal window
-  _animateText = text => {
+  // Handles typing out the name into the terminal.
+  _typeName = text => {
     let i = 1
     let typeTime = QUICK
 
+    // When we start typing into the terminal, stop blinking the cursor.
+    this.setState({blinking: false})
+
+    // Define a closure which will type a single letter each time it is invoked.
     const typeOne = () => {
       if (i > text.length) {
-        this.setState({ animating: false })
         return
       }
 
@@ -72,6 +75,7 @@ class Terminal extends Component {
         timer,
       })
     }
+
     typeOne()
   }
 }

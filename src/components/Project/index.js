@@ -8,14 +8,14 @@ class Project extends Component {
     this._renderDate = this._renderDate.bind(this)
   }
 
+  // Props:
+  //  - name - title of the project
+  //  - date - optional, may be range
+  //  - url - link to project
+  //  - description - the body text describing the project
   render() {
-    const { name, date, subheader, url } = this.props
-    let { description, emoji } = this.props
-
-    // If description is not an array of paragraphs, wrap it in an array.
-    if (!Array.isArray(description)) {
-      description = [description]
-    }
+    const { name, date, url, description } = this.props
+    let { emoji } = this.props
 
     // TODO: size this correctly
     if (!emoji) {
@@ -30,45 +30,42 @@ class Project extends Component {
             {name}
           </a>
           <span className="Project__dot">{' • '}</span>
-          <span className="Project__subheader">{subheader}</span>
+          {this._renderDate(date)}
         </div>
-        {this._renderDate(date)}
-        {description.map(paragraph => (
-          <Markdown
-            className="Project__description"
-            key={paragraph}
-            source={paragraph}
-          />
-        ))}
+        <Markdown
+          className="Project__description"
+          key={description}
+          source={description}
+        />
       </div>
     )
   }
 
+  // Renders the date as an inline span.
+  // Ranges are rendered as `start -> end`.
+  // Single dates are rendered `date`
   _renderDate = date => {
-    // TODO: figure out styling for this
-    return null
     if (!date) {
       return null
     }
 
-    const wrap = children => (
-      <div className="Project__date-container">{children}</div>
-    )
-
+    // Case 1: single date
     if (!date.start && !date.end) {
-      return wrap(
-        <span className="Project__date">{date.format('MMM D, YYYY')}</span>
+      return (
+        <span className="Project__date-container">
+          <span className="Project__date">{date.format('MMM YYYY')}</span>
+        </span>
       )
     }
 
+    // Case 2: date range
     const end = date.end ? date.end.format('MMM YYYY') : 'Now'
-
-    return wrap(
-      <div>
+    return (
+      <span className="Project__date-container">
         <span>{date.start.format('MMM YYYY')}</span>
         <span className="Project__date-arrow">{' → '}</span>
         <span>{end}</span>
-      </div>
+      </span>
     )
   }
 }

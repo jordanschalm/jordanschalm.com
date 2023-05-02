@@ -20,17 +20,18 @@
   display: inline-block;
   color: white;
   margin: 0;
+  padding: 0;
 }
 
 .Terminal__cursor {
   display: inline-block;
-  height: 2.25rem;
+  height: 2.5rem;
   width: 1rem;
   background-color: rgb(98, 98, 98);
 }
 
-.Terminal__container .animating {
-  animation: Terminal__cursor-color 2s infinite;
+.Terminal__container .blinking {
+  animation: Terminal__cursor-color 1s infinite;
 }
 
 @keyframes Terminal__cursor-color {

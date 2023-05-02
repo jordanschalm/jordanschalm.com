@@ -7,17 +7,27 @@ import Contact from './../components/Contact'
 
 import data from './../data'
 
+const highlights = [...data.projects, ...data.presentations, ...data.writing].filter(p => p.highlight)
+
 const HomePage = () => (
   <div>
     <Terminal text="Jordan Schalm" />
     <Preface />
-    <Header title="Things I Do" />
-    {data.projects.current.map(project => (
-      <Project key={project.name} {...project} />
+    <Header title="Highlights" />
+    {highlights.map(project => (
+      <Project key={project.name} description={project.long} {...project} />
     ))}
-    <Header title="Things I Have Done" />
-    {data.projects.older.map(project => (
-      <Project key={project.name} {...project} />
+    <Header title="Writing" />
+    {data.writing.map(project => (
+      <Project key={project.name} description={project.short} {...project} />
+    ))}
+    <Header title="Presentations" />
+    {data.presentations.map(project => (
+      <Project key={project.name} description={project.short} {...project} />
+    ))}
+    <Header title="Other Things" />
+    {data.projects.map(project => (
+      <Project key={project.name} description={project.short} {...project} />
     ))}
     <Header title="Contact" />
     <Contact />
