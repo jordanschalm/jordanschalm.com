@@ -6,6 +6,18 @@ const MONTH_F = 'YYYY-MM'
 export default {
   writing: [
     {
+      name: 'Upgrading Flow\'s Consensus Follower',
+      emoji: '🧲',
+      highlight: false,
+      url: 'https://flow.com/engineering-blogs/upgrading-flows-consensus-follower-to-boost-attack-resilience-and-processing-speed',
+      date: Moment('2023-05-30', MONTH_F),
+      short: `An article about improving resilience and laying the foundation for extremely efficient light clients.`,
+      long: `
+Upgrading Flow's consensus algorithm to Jolteon enabled several improvements to the Consensus Follower.
+This article outlines how these changes improve attack resilience and lay the foundation for extremely efficient light clients.
+`
+    },
+    {
       name: 'Jolteon: Advancing Flow\'s Consensus',
       emoji: '⚡️',
       highlight: true,
