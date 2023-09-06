@@ -29,7 +29,7 @@ const HomePage = () => (
     {data.projects.map(project => (
       <Project key={project.name} description={project.short} {...project} />
     ))}
-    <Header title="Contact" />
+    <Header title="Contact"/>
     <Contact />
   </div>
 )
