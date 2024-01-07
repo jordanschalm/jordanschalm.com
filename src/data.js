@@ -110,6 +110,19 @@ create new asset classes, and incentivize more open digital spaces.`,
   ],
   projects: [
     {
+      name: 'Sessional Lecturer',
+      emoji: '👨‍🏫',
+      url: '',
+      date: {
+        start: Moment('2023-09'),
+          end: Moment('2023-12')
+      },
+      short: `I taught DSCI 512 - Data Structures & Algorithms, part of the Masters of Data Science program at UBC.`,
+      long: `
+I taught DSCI 512 - Data Structures & Algorithms for the 2023-24 offering of the Masters of Data Science program at UBC.
+I prepared and delivered biweekly lectures, ran lab sessions, and created assessments.`
+    },
+    {
       name: 'Flow',
       emoji: '🌊',
       highlight: true,
