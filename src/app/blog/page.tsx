@@ -1,9 +1,9 @@
 import { Header } from '@/components/defaults'
 
-export default function Words() {
+export default function Blog() {
   return (
     <>
-      <Header>Words</Header>
+      <Header>Blog</Header>
     </>
   )
 }
