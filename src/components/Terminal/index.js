@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import './index.css'
 
 // Typestroke speeds (ms)
