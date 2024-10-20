@@ -16,6 +16,7 @@ export default function AboutBlurb() {
         <A href="https://masterdatascience.ubc.ca">Master of Data Science</A>{' '}
         program at <A href="https://ubc.ca">UBC</A>.
       </P>
+      <P></P>
     </>
   )
 }

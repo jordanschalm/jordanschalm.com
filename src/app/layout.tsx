@@ -1,6 +1,6 @@
 import type { Metadata } from 'next' // this is important for some reason
 import './globals.css'
-import Terminal from '@/components/Terminal'
+import Terminal from '@/components/Terminal.tsx'
 import Nav from '@/components/Nav'
 import { Inconsolata, Josefin_Slab, Alfa_Slab_One } from 'next/font/google'
 
@@ -33,7 +33,7 @@ export default function RootLayout({
       lang="en"
       className={`${inconsolata.variable} ${josefinSlab.variable} ${alfaSlabOne.variable}`}
     >
-      <body className="font-alfa">
+      <body className="font-josefin text-slate-700">
         <div className="w-full flex flex-col items-center px-2 ">
           <header className="max-w-prose w-full my-4">
             <Terminal text="Jordan Schalm" />

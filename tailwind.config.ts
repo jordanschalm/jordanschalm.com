@@ -17,8 +17,18 @@ const config: Config = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+      animation: {
+        blink: 'blink 1s infinite',
+      },
+      keyframes: {
+        blink: {
+          '0%': { opacity: '100%' },
+          '20%': { opacity: '0%' },
+          '40%': { opacity: '0%' },
+          '60%': { opacity: '100%' },
+        },
+      },
     },
   },
-  plugins: [],
 }
 export default config
