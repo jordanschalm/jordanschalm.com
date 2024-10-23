@@ -77,5 +77,5 @@ const Cursor = ({ blinking }) => {
   if (blinking) {
     animation = 'animate-blink'
   }
-  return <div className={`inline-block h-10 bg-emerald-600 w-4 ${animation}`} />
+  return <div className={`inline-block h-10 bg-pink-500 w-4 ${animation}`} />
 }

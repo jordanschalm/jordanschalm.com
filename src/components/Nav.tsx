@@ -9,9 +9,9 @@ const NavItem = ({ children, href }) => {
     <Link
       className={`
       px-4 py-1
-      text-md font-thin tracking-widest uppercase text-slate-500
-      link ${href === path ? 'text-amber-700' : ''}
-      hover:text-amber-700 hover:underline
+      text-md font-josefin font-thin tracking-widest uppercase text-slate-500
+      link ${href === path ? 'text-emerald-700 decoration-dotted underline decoration-1' : ''}
+      hover:text-emerald-700 hover:underline
       underline-offset-4 decoration-2`}
       href={href}
     >

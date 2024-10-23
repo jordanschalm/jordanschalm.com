@@ -20,7 +20,7 @@ const josefinSlab = Josefin_Slab({
 const alfaSlabOne = Alfa_Slab_One({
   weight: ['400'],
   subsets: ['latin'],
-  variable: '--font-alfa-slab-one',
+  variable: '--font-alfa-one-slab',
 })
 
 export const metadata: Metadata = {
