@@ -18,10 +18,12 @@ export default function Now() {
   return (
     <>
       <H1>Now</H1>
-      {now.data.where ? <div>🌎 {now.data.where}</div> : null}
-      {now.data.reading ? <div>📚 {now.data.reading}</div> : null}
-      {now.data.listening ? <div>🎵 {now.data.listening}</div> : null}
-      {now.data.watching ? <div>📺 {now.data.watching}</div> : null}
+      <div className="mb-2 pl-2 border-l border-l-emerald-700">
+        {now.data.where ? <div>🌎 {now.data.where}</div> : null}
+        {now.data.reading ? <div>📚 {now.data.reading}</div> : null}
+        {now.data.listening ? <div>🎵 {now.data.listening}</div> : null}
+        {now.data.watching ? <div>📺 {now.data.watching}</div> : null}
+      </div>
       {sortedNowEntries[0].content}
       <p className="text-sm mt-6">Last updated: {now.date}</p>
     </>
