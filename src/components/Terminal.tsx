@@ -1,9 +1,6 @@
 'use client'
 
-import './Terminal/index.css'
 import React, { useEffect, useState } from 'react'
-import { invokeOnce } from '@/util/util'
-import { blob } from 'node:stream/consumers'
 
 // Typestroke speeds (ms)
 const QUICK = 200
@@ -81,5 +78,5 @@ const Cursor = ({ blinking }) => {
   if (blinking) {
     animation = 'animate-blink'
   }
-  return <div className={`inline-block h-10 bg-orange-600 w-4 ${animation}`} />
+  return <div className={`inline-block h-10 bg-emerald-600 w-4 ${animation}`} />
 }
