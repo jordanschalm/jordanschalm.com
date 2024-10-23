@@ -13,7 +13,7 @@ const NavItem = ({ children, href }) => (
   </Link>
 )
 
-export default () => (
+const Nav = () => (
   <nav className="flex justify-around font-alfa">
     <NavItem href="/">/</NavItem>
     <NavItem href="/now">Now</NavItem>
@@ -21,3 +21,5 @@ export default () => (
     <NavItem href="/blog">Blog</NavItem>
   </nav>
 )
+
+export default Nav

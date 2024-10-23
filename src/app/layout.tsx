@@ -1,6 +1,7 @@
-import type { Metadata } from 'next' // this is important for some reason
+import type { Metadata } from 'next'
+
 import './globals.css'
-import Terminal from '@/components/Terminal.tsx'
+import Terminal from '@/components/Terminal'
 import Nav from '@/components/Nav'
 import { Inconsolata, Josefin_Slab, Alfa_Slab_One } from 'next/font/google'
 
@@ -22,6 +23,10 @@ const alfaSlabOne = Alfa_Slab_One({
   subsets: ['latin'],
   variable: '--font-alfa-slab-one',
 })
+
+export const metadata: Metadata = {
+  title: "Jordan Schalm's personal website",
+}
 
 export default function RootLayout({
   children,
