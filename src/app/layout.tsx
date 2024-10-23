@@ -44,7 +44,9 @@ export default function RootLayout({
             <Terminal text="Jordan Schalm" />
             <Nav />
           </header>
-          {children}
+          <main className="flex w-full justify-center">
+            <div className="max-w-prose">{children}</div>
+          </main>
         </div>
       </body>
     </html>

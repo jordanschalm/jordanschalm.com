@@ -4,10 +4,8 @@ import AboutBlurb from '@/components/AboutBlurb'
 
 export default function Home() {
   return (
-    <main className="flex w-full justify-center">
-      <div className="max-w-prose">
-        <AboutBlurb />
-      </div>
-    </main>
+    <>
+      <AboutBlurb />
+    </>
   )
 }
