@@ -48,7 +48,6 @@ export default function Terminal({ text }: TerminalProps) {
         // Add ±10% of jitter
         const jitter = typeTime + (Math.random() - 0.5) * (0.1 * typeTime)
         timer = setTimeout(typeOne, typeTime + jitter)
-        console.log('setting visible text:', visibleText)
         setVisibleText(visibleText)
       }
 
