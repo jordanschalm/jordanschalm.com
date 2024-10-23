@@ -10,13 +10,19 @@ export default function AboutBlurb() {
         distributed systems.
       </P>
       <P>
-        Previously, I co-created{' '}
+        Previously, I helped operate{' '}
+        <A href="https://www.ubclaunchpad.com">UBC Launch Pad</A>, co-created{' '}
         <A href="https://www.cryptokitties.co">CryptoKitties</A> and taught for
         the{' '}
         <A href="https://masterdatascience.ubc.ca">Master of Data Science</A>{' '}
         program at <A href="https://ubc.ca">UBC</A>.
       </P>
-      <P></P>
+      <P>
+        You can find my open-source work on{' '}
+        <A href="https://github.com/jordanschalm">GitHub</A>. The best way to
+        get in touch is via <A href="mailto:hark-adagio-08@icloud.com">email</A>
+        .
+      </P>
     </>
   )
 }
