@@ -17,7 +17,6 @@ const josefinSlab = Josefin_Slab({
   variable: '--font-josefin-slab',
 })
 
-// https://fonts.googleapis.com/css?family=Alfa+Slab+One|Josefin+Slab:400,700|Inconsolata:400,700
 const alfaSlabOne = Alfa_Slab_One({
   weight: ['400'],
   subsets: ['latin'],
@@ -25,7 +24,8 @@ const alfaSlabOne = Alfa_Slab_One({
 })
 
 export const metadata: Metadata = {
-  title: "Jordan Schalm's personal website",
+  title: 'Jordan Schalm',
+  description: "Jordan Schalm's personal website",
 }
 
 export default function RootLayout({
@@ -38,9 +38,9 @@ export default function RootLayout({
       lang="en"
       className={`${inconsolata.variable} ${josefinSlab.variable} ${alfaSlabOne.variable}`}
     >
-      <body className="font-josefin text-slate-700">
+      <body className="font-josefin text-slate-700 bg-emerald-50">
         <div className="w-full flex flex-col items-center px-2 ">
-          <header className="max-w-prose w-full my-4">
+          <header className="max-w-prose w-full my-8">
             <Terminal text="Jordan Schalm" />
             <Nav />
           </header>

@@ -1,9 +1,9 @@
-import { Header } from '@/components/defaults'
+import { H1 } from '@/components/defaults'
 
 export default function Now() {
   return (
     <>
-      <Header>Now</Header>
+      <H1>Now</H1>
     </>
   )
 }

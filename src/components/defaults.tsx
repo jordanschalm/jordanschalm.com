@@ -6,6 +6,10 @@ export const A = ({ children, href }) => (
 
 export const P = ({ children }) => <p className="pb-2 text-lg">{children}</p>
 
-export const Header = ({ children }) => (
+export const H1 = ({ children }) => (
   <h1 className="text-3xl font-extrabold mb-4">{children}</h1>
+)
+
+export const H2 = ({ children }) => (
+  <h2 className="text-xl text-left font-medium mb-2">{children}</h2>
 )
